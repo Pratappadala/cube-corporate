@@ -1,0 +1,3 @@
+'use client';
+import { useEffect,useRef,type ReactNode } from 'react';
+export function Modal({open,onClose,children}:{open:boolean;onClose:()=>void;children:ReactNode}){const ref=useRef<HTMLDialogElement>(null);useEffect(()=>{if(open)ref.current?.showModal();else ref.current?.close()},[open]);return <dialog ref={ref} onCancel={onClose} onClick={e=>{if(e.target===e.currentTarget){const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)onClose()}}}><button className="close" onClick={onClose} aria-label="Close dialog">×</button>{children}</dialog>}

@@ -1,0 +1,2 @@
+import { Card } from '../ui/Card';
+export function TermsContent(){return (<section className="page-body"><article className="article"><h2>{"Terms & Conditions"}</h2><div className="notice">{"This page is a placeholder for the approved terms & conditions. It is not a published legal policy."}</div><p>{"The final content must reflect the selected hosting, analytics, form processing, portal authentication and data-retention arrangements."}</p></article></section>)}

@@ -1,0 +1,3 @@
+import {ContactForm} from "./ContactForm";
+import { Card } from '../ui/Card';
+export function ContactContent(){return (<section className="page-body"><div className="content-split"><div><div className="eyebrow">{"BOOK A CONSULTATION"}</div><h2>{"Your ambition."}<br/>{"Our next conversation."}</h2><p>{"Tell us about your organisation and your plans. We can use this brief to shape the next project discussion."}</p><div className="notice">{"Preview form: enquiries are not sent or saved. Contact details and office locations will be added once confirmed."}</div></div><ContactForm/></div></section>)}

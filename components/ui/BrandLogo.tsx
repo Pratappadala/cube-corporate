@@ -1,0 +1,1 @@
+export function BrandLogo({light=false}:{light?:boolean}){return <span style={{display:'inline-flex',alignItems:'center',flexShrink:0}}><img src={light?'/assets/cube-official-logo.png':'/assets/cube-official-logo-dark.png'} alt="Cube Corporate Support Ltd." width={150} height={55} style={{display:'block',width:150,height:'auto',maxWidth:'100%'}}/></span>}

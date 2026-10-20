@@ -1,0 +1,10 @@
+export interface Project{name:string;category:string;progress:number;img:string;status:string}
+export interface DocumentRecord{name:string;cat:string;by:string;date:string;size:string;status:string;file?:File}
+export interface Task{name:string;project:number;date:string;done:boolean}
+export interface Approval{name:string;project:string;status:string}
+export interface Profile{name:string;email:string;company:string;phone:string;title:string}
+export const projects:Project[]=[{name:'Caribbean Market Entry',category:'Planning & Strategy',progress:65,img:'skyline.jpg',status:'On Track'},{name:'Real Estate Advisory',category:'Market Analysis',progress:40,img:'office.jpg',status:'In Progress'},{name:'Technology Infrastructure',category:'Consulting',progress:78,img:'team.jpg',status:'On Track'}];
+export const initialDocuments:DocumentRecord[]=[{name:'Project_Proposal.pdf',cat:'Proposals',by:'Cube Team',date:'Oct 12, 2026',size:'2.4 MB',status:'Shared'},{name:'Market_Analysis.docx',cat:'Reports',by:'You',date:'Oct 10, 2026',size:'1.1 MB',status:'Uploaded'},{name:'Contract_Agreement.pdf',cat:'Contracts',by:'Cube Team',date:'Oct 08, 2026',size:'3.2 MB',status:'Signed'},{name:'Requirements.xlsx',cat:'Requirements',by:'You',date:'Oct 05, 2026',size:'680 KB',status:'Uploaded'},{name:'Site_Plan.pdf',cat:'Designs',by:'Cube Team',date:'Oct 01, 2026',size:'4.1 MB',status:'Pending'}];
+export const initialTasks:Task[]=[{name:'Review project requirements',project:0,date:'Oct 25, 2026',done:false},{name:'Share initial documents',project:0,date:'Oct 26, 2026',done:false},{name:'Provide financial data',project:1,date:'Oct 28, 2026',done:false},{name:'Review contract draft',project:1,date:'Oct 29, 2026',done:false},{name:'Schedule kick-off meeting',project:2,date:'Oct 30, 2026',done:true}];
+export const initialApprovals:Approval[]=[{name:'Statement of work',project:'Caribbean Market Entry',status:'Pending'},{name:'Implementation roadmap',project:'Technology Infrastructure',status:'Pending'}];
+export const initialProfile:Profile={name:'John Doe',email:'john@example.com',company:'Example Company',phone:'',title:'Director'};

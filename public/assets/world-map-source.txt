@@ -1,0 +1,1 @@
+Country outlines: https://github.com/datasets/geo-countries (Natural Earth-derived public-domain geographic data). Simplified equirectangular rendering; Caribbean marker indicates market focus, not an office.

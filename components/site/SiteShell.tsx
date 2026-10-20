@@ -1,0 +1,4 @@
+'use client';
+import {useEffect,type ReactNode} from 'react';
+import {Header} from './Header';import {Footer} from './Footer';
+export function SiteShell({children}:{children:ReactNode}){useEffect(()=>{const nodes=document.querySelectorAll('.reveal:not(.about-step)');const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});document.documentElement.classList.add('js');nodes.forEach(n=>observer.observe(n));const stepsObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');stepsObserver.unobserve(e.target)}}),{threshold:.25,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.about-step').forEach(n=>stepsObserver.observe(n));return()=>{observer.disconnect();stepsObserver.disconnect();document.documentElement.classList.remove('js')}},[]);return <div className="site-shell"><Header/>{children}<Footer/></div>}

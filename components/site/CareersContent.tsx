@@ -1,0 +1,2 @@
+import { Card } from '../ui/Card';
+export function CareersContent(){return (<section className="page-body"><div className="content-split"><div><h2>{"Be part of the next chapter."}</h2><p>{"We value clear thinking, collaboration and a considered approach to complex business challenges."}</p><div className="notice">{"No verified vacancies are published in this preview. Opportunities will appear here when provided by Cube Corporate."}</div></div><img src="/assets/team.jpg" alt="Collaborative team"/></div></section>)}
