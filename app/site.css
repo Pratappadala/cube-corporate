@@ -42,7 +42,7 @@
 .site-header .nav-expand[aria-expanded=true]{transform:rotate(180deg);color:var(--nav-hover)}
 .site-header .nav-dropdown{top:calc(100% + 12px);left:-22px;width:270px;padding:10px;border:1px solid #e8e1d5;border-top:2px solid #d0ab6c;border-radius:10px;background:#fff;box-shadow:0 18px 50px #03172d26;gap:2px;animation:navReveal .22s ease both}
 .site-header .nav-dropdown a{padding:12px 14px;font-size:12px;font-weight:500;line-height:1.5;border-radius:6px;color:#24374c;transition:color .2s ease,background .2s ease}
-.site-header .nav-dropdown a:hover,.site-header .nav-dropdown a:focus-visible{color:#815719;background:#fff3cd}
+.site-header .nav-dropdown a:hover,.site-header .nav-dropdown a:focus-visible{color:#815719;background:#fdf5d7}
 .site-header>.button.small{border-radius:6px;white-space:nowrap;box-shadow:0 3px 12px #0000000a;transition:background .25s ease,box-shadow .25s ease}
 .site-header>.button.small:hover{transform:none;box-shadow:0 5px 20px #d1aa6426;background:#b78a47}
 @keyframes navReveal{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
