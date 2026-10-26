@@ -1,0 +1,50 @@
+name: Build Cube Corporate Netlify dist
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check TypeScript
+        run: npm run typecheck
+
+      - name: Build static website
+        run: npm run build
+
+      - name: Prepare Netlify dist folder
+        run: |
+          rm -rf dist
+          mkdir -p dist
+          cp -a out/. dist/
+          test -f dist/index.html
+          zip -qr Cube-Corporate-Netlify-dist.zip dist
+
+      - name: Upload deployment files
+        uses: actions/upload-artifact@v4
+        with:
+          name: cube-corporate-netlify-dist
+          path: |
+            dist/
+            Cube-Corporate-Netlify-dist.zip
+          if-no-files-found: error
+          retention-days: 14
