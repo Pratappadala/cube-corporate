@@ -1,0 +1,9 @@
+[build]
+  command = "npm ci && npm run typecheck && npm run build && rm -rf dist && mkdir -p dist && cp -a out/. dist/"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Next.js static export preserves the existing route URLs.
+# The app is currently a static preview; authentication and backend APIs are not included.
